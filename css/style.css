@@ -1,0 +1,536 @@
+html
+{
+    --color-primary: #ff94b4;
+    --color-secondary: #616161;
+    --color-white: white;
+}
+
+#main
+{
+    align-self: flex-start;
+    justify-self: stretch;
+    width: 100%;
+
+    align-content: flex-start;
+    display: flex;
+}
+section.top_menu
+{
+    /* display: flex; */
+}
+
+.search form
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search form input
+{
+    font-size: 120%;
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+    padding: 8px 20px 8px 30px;
+    /* box-shadow: 2px 2px 4px rgba(0,0,0,0.2); */
+    position: relative;
+    width: 80%;
+}
+
+#main .logo
+{
+    padding: 0 15px;
+}
+#main .logo > a
+{
+    position: relative;
+}
+#main .logo .title
+{
+    font-size: 150%;
+    color: var(--color-primary);
+    font-weight: 600;
+    position: relative;
+    padding: 0 5px ;
+}
+#main .logo .title::after
+{
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;height: 5px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+#main .logo .title::before
+{
+    content: '';
+    position: absolute;
+    bottom: -2px;left: 0;right: 0;
+    height: 1px;
+    border-radius: 1px;
+    background-color: var(--color-primary);
+}
+#main .logo .icon
+{
+    position: relative;
+}
+#main .logo .icon > img
+{
+    bottom: -5px;
+}
+#main .logo a.flex-row
+{
+    align-items: center;
+    justify-content: flex-start;
+}
+#main .logo a.flex-row span:nth-child(1)
+{
+    flex: 0;
+}
+
+
+#main .useful ul li {flex: 0; margin: 0 2px;}
+#main .useful ul li a
+{
+    display: inline-block;
+    padding: 10px;
+    font-size: 125%;
+    color: var(--color-secondary);
+}
+#main .useful ul li a:hover
+{
+    color: var(--color-primary);
+    transition: color 100ms ease-in;
+}
+
+#main .bottom-menu
+{
+    height: 50px;
+    position: relative;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    max-width: 100%;
+    overflow-y: hidden;
+}
+#main .bottom-menu li
+{
+    position: relative;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#main .bottom-menu li:nth-child(1) {flex:0;}
+#main .bottom-menu li a
+{
+    padding: 10px 15px;
+    color: var(--color-secondary);
+    transition: color 100ms ease-in;
+}
+#main .bottom-menu li a:hover
+{
+    color: var(--color-primary);
+}
+
+
+
+/* special tag */
+.special-tag
+{
+    background-image: linear-gradient(to left, #6bc2db, #9be8e7);
+}
+
+
+
+section.main
+{
+    margin-top: 50px;
+    /* align-items: flex-start; */
+    position: relative;
+}
+section.main > .cards-row 
+{
+    padding-bottom: 20px;
+    position: relative;
+}
+section.main > .cards-row::after
+{
+    content: '';
+    position: absolute;
+    left: 0;right: 0;bottom: 0;
+    height: 1px;
+    background-image: linear-gradient(
+        to left,
+        rgba(0,0,0,0), 
+        rgba(0,0,0,0.25), 
+        rgba(0,0,0,0));
+}
+section.main .special-title
+{
+    justify-self: center;
+    flex: 0;
+    font-size: 200%;
+    color: var(--color-primary);
+}
+section.main .special-area
+{
+    margin: 10px 0 20px 0;
+}
+section.main .card
+{
+    /* width: 100px; */
+    flex: 150px 0;
+    margin: 0 5px;
+    background: var(--color-white);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.125);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--color-secondary);
+}
+section.main .card:hover
+{
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
+}
+section.main .card ._image
+{
+    height: 120px;
+    width: 120px;
+    justify-self: center;
+}
+section.main .card ._title *
+{
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+section.main .card ._content *
+{
+    font-weight: 200;
+    text-align: center;
+    font-size: 80%;
+}
+section.main .card ._baloon
+{
+    padding: 0 5px;
+    border-radius: 10px;
+    font-size: 75%;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+section.main .card.special {position: relative;overflow: hidden;}
+section.main .card.special::before
+{
+    content: attr(aria-details);
+    position: absolute;
+    top: 0;right: 0;
+    padding: 5px 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-bottom-left-radius: 5px;
+    font-weight: 600;
+    font-size: 75%;
+    text-transform: uppercase;
+}
+section.main .card ._price
+{
+    font-size: 110%;
+    font-weight: 600;
+}
+
+
+.category-row > a
+{
+    flex: 140px 0;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+    color: var(--color-secondary);
+}
+.category-row > a ._image
+{
+    width: 120px;
+    height: 120px;
+    justify-self: center;
+}
+.category-row > a ._title
+{
+    justify-content: center;
+    align-self: center;
+    margin-top: -10px;
+    font-weight: 600;
+    font-size: 90%;
+}
+
+
+.bottom-links
+{
+    --bottom-links-bg: #e0e0e0;
+    background-color: var(--bottom-links-bg);
+}
+.bottom-links .bottom-link
+{
+    margin-top: 10px;
+}
+.bottom-links .bottom-link.title
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.bottom-links .bottom-link.title > div
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.bottom-links .bottom-link.title > div > span
+{
+    background-color: var(--bottom-links-bg);
+    padding: 5px 15px;
+    color: var(--color-secondary);
+    z-index: 2;
+}
+.bottom-links .bottom-link.title > div::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;right: 0;
+    transform: translateY(-50%);
+    height: 1px;
+    background-image: linear-gradient(
+        to left,
+        rgba(0,0,0,0), 
+        rgba(0,0,0,0.25), 
+        rgba(0,0,0,0));
+    z-index: 1;
+}
+
+
+.bottom-links .help-card
+{
+    flex: 80px 0;
+    padding: 5px 10px;
+    color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.bottom-links .help-card ._circle
+{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+    background-color: var(--color-white);
+    transform: scale(100%,100%);
+    transition: transform 1000ms ease-in-out;
+}
+.bottom-links .help-card:hover ._circle 
+{
+    
+    animation-name: bottom_links_help_card_pulse;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+
+    transform: scale(110%,110%);
+}
+@keyframes bottom_links_help_card_pulse {
+    0%
+    {
+        transform: scale(100%,100%);
+    }
+    50%
+    {
+        transform: scale(110%, 110%);
+    }
+    100%
+    {
+        transform: scale(100%,100%);
+    }
+}
+
+.bottom-links .help-card ._circle i
+{
+    display: block;
+    position: absolute;
+}
+.bottom-links .help-card ._circle ._big
+{
+    font-size: 40px;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+}
+.bottom-links .help-card ._circle ._small
+{
+    top: 20%;right: 20%;
+    font-size: 20px;
+    color: var(--color-primary);
+    text-shadow: 0 0 2px var(--color-white);
+}
+.bottom-links .help-card ._title
+{
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    text-transform: uppercase;
+    font-size: 90%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+/* loading... */
+.loading-main .loading-cards .loading
+{   
+    --card-height: 250px;
+    --card-width: 150px;
+    --card-skeleton: linear-gradient(rgba(200,200,200,1) var(--card-height), transparent 0);
+
+    --image-size: 120px;
+    --image-padding: calc( calc(var(--card-width) - var(--image-size)) / 2 );
+    --image-position-x: calc(calc(var(--card-width) - var(--image-size)) / 2);
+    --image-position-y: 20px;
+    --image-position: var(--image-position-x) var(--image-position-y);
+    --image-sizeF: var(--image-size) var(--image-size);
+    --image-skeleton: radial-gradient(circle calc(var(--image-size)/2), white 99%, transparent 0);
+
+    --title-height: 20px;
+    --title-width: 120px;
+    --title-position-x: calc(calc(var(--card-width) - var(--title-width)) / 2);
+    --title-position-y: calc( calc(var(--image-position-y) + calc(var(--title-height) / 2)) + var(--image-size));
+    --title-position: var(--title-position-x) var(--title-position-y);
+    --title-size: var(--title-width) var(--title-height);
+
+
+    --desc-height: 30px;
+    --desc-width: 110px;
+    --desc-size: var(--desc-width) var(--desc-height);
+    --desc-position-x: calc(calc(var(--card-width) - var(--desc-width))/2);
+    --desc-position-y: calc(var(--title-position-y) + var(--title-height) + calc( var(--title-height) / 2 ));
+    --desc-position: var(--desc-position-x) var(--desc-position-y);
+
+
+    --price-height: 20px;
+    --price-width: 90px;
+    --price-size: var(--price-width) var(--price-height);
+    --price-position-x: calc(calc(var(--card-width) - var(--price-width)) / 2);
+    --price-position-y: calc(var(--desc-position-y) + var(--desc-height) + calc(var(--title-height) / 2));
+    --price-position: var(--price-position-x) var(--price-position-y);
+    /* continuar aqui. */
+
+    --blur-width: 200px;
+    --blur-size: var(--card-width) var(--card-height);
+    --blur-skeleton: linear-gradient(
+        90deg, 
+        rgba(209, 209, 209, 0) 0, 
+        rgba(209, 209, 209, 0.8) 50%,
+        rgba(209, 209, 209, 0) 100%);
+    --blur-position-start: calc(var(--blur-width) * -1) 0;
+    --blur-position-end: var(--blur-width) 0;
+
+    max-width: var(--card-width);
+    /* background-color: rgb(151, 151, 151); */
+    height: 250px;
+    margin: 0 5px;
+    position: relative;
+
+    border-radius: 5px;
+
+    background-image: 
+        var(--blur-skeleton),
+        var(--image-skeleton),
+        linear-gradient(white 99%, transparent 0),
+        linear-gradient(white 99%, transparent 0),
+        linear-gradient(white 99%, transparent 0),
+        var(--card-skeleton);
+
+    background-size: 
+        var(--blur-size),
+        var(--image-sizeF),
+        var(--title-size),
+        var(--desc-size),
+        var(--price-size),
+        100% 100%;
+
+    background-position: 
+        var(--blur-position-start),
+        var(--image-position),
+        var(--title-position),
+        var(--desc-position),
+        var(--price-position),
+        0 0px;
+
+    background-repeat: no-repeat;
+
+    animation: loading_cards_skeleton 1.5s infinite;
+}
+
+@keyframes loading_cards_skeleton
+{
+    to
+    {
+        background-position: 
+            var(--blur-position-end),
+            var(--image-position),
+            var(--title-position),
+            var(--desc-position),
+            var(--price-position),
+            0 0px;
+    }
+}
+
+.loading-main .loading-title
+{
+    height: 50px;
+    position: relative;
+}
+.loading-main .loading-title::before
+{
+    content: '';
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    background-image:
+        linear-gradient(90deg, rgb(200, 200, 200),white,rgba(200,200,200,1)),
+        linear-gradient(#c8c8c8,#c8c8c8,#c8c8c8);
+    background-position: 
+        -250px 0,
+        0 0;
+    background-size: 
+        200px 30px,
+        200px 30px;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    border: 2px solid rgba(200,200,200);
+
+    overflow: hidden;
+    animation: loading_title_skeleton 1.5s infinite;
+}
+
+@keyframes loading_title_skeleton
+{
+    to
+    {
+        background-position: 
+            250px 0,
+            0 0;
+    }
+}

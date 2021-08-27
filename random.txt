@@ -1,0 +1,3 @@
+fa-shopping-cart
+fa-user
+fa-search
